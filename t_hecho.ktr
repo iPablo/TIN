@@ -100,12 +100,15 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Add sequence</from><to>Table output</to><enabled>Y</enabled> </hop>
-  <hop> <from>CSV file input</from><to>Select values</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values</from><to>Add sequence</to><enabled>Y</enabled> </hop>
+  <hop> <from>id_hecho</from><to>ubicacion</to><enabled>Y</enabled> </hop>
+  <hop> <from>CSV file input</from><to>Select values 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>id_hecho</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>ubicacion</from><to>Database lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Database lookup</from><to>Select values</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Add sequence</name>
+    <name>id_hecho</name>
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
@@ -117,7 +120,7 @@
            </partitioning>
       <valuename>id_hecho</valuename>
       <use_database>N</use_database>
-      <connection/>
+      <connection>paro</connection>
       <schema/>
       <seqname>SEQ_</seqname>
       <use_counter>Y</use_counter>
@@ -127,8 +130,8 @@
       <max_value>999999999</max_value>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>515</xloc>
-      <yloc>286</yloc>
+      <xloc>237</xloc>
+      <yloc>45</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -381,8 +384,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>228</xloc>
-      <yloc>285</yloc>
+      <xloc>120</xloc>
+      <yloc>45</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -398,30 +401,201 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>total Paro Registrado</name>
-        <rename>paro</rename>
+    <fields>      <field>        <name>paro</name>
+        <rename>paro_total</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>h25</name>
+        <rename>paro_h25</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>h2545</name>
+        <rename>paro_h2545</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>h45</name>
+        <rename>paro_h45</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>m25</name>
+        <rename>paro_m25</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>m2545</name>
+        <rename>paro_m2545</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>m45</name>
+        <rename>paro_m45</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>agricultura</name>
+        <rename>paro_agricultura</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>industria</name>
+        <rename>paro_industria</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>construccion</name>
+        <rename>paro_construccion</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>servicios</name>
+        <rename>paro_servicios</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>sin_empleo</name>
+        <rename>paro_sin_empleo</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>id_hecho</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>id_ubicacion</name>
+        <rename>ubicacion_fk</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
-      <meta>        <name>total Paro Registrado</name>
-        <rename>paro</rename>
-        <type>None</type>
-        <length>15</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>    </fields>     <cluster_schema/>
+    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>366</xloc>
-      <yloc>286</yloc>
+      <xloc>467</xloc>
+      <yloc>134</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ubicacion</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>paro</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>ubicacion</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ca</name>
+        <field>ca</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>provincia</name>
+        <field>provincia</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ciudad</name>
+        <field>ciudad</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id_ubicacion</name>
+        <rename>id_ubicacion</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>347</xloc>
+      <yloc>44</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Comunidad Aut&#xf3;noma</name>
+        <rename>ca</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Provincia</name>
+        <rename>provincia</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Municipio</name>
+        <rename>ciudad</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>total Paro Registrado</name>
+        <rename>paro</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro hombre edad &#x3c; 25</name>
+        <rename>h25</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro hombre edad 25 -45</name>
+        <rename>h2545</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro hombre edad &#x3e;&#x3d;45</name>
+        <rename>h45</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro mujer edad &#x3c; 25</name>
+        <rename>m25</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro mujer edad 25 -45</name>
+        <rename>m2545</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro mujer edad &#x3e;&#x3d;45</name>
+        <rename>m45</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro Agricultura</name>
+        <rename>agricultura</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro Industria</name>
+        <rename>industria</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro Construcci&#xf3;n</name>
+        <rename>construccion</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro Servicios</name>
+        <rename>servicios</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Paro Sin empleo Anterior</name>
+        <rename>sin_empleo</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>195</xloc>
+      <yloc>158</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -437,9 +611,9 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>paro</connection>
+    <connection/>
     <schema/>
-    <table>hecho</table>
+    <table/>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -458,8 +632,38 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>655</xloc>
-      <yloc>286</yloc>
+      <xloc>468</xloc>
+      <yloc>233</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Database lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection/>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>lookup table</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>346</xloc>
+      <yloc>131</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
