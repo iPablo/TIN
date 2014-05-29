@@ -104,7 +104,7 @@
   <hop> <from>Select values</from><to>Unique rows</to><enabled>Y</enabled> </hop>
   <hop> <from>Unique rows</from><to>Strings cut</to><enabled>Y</enabled> </hop>
   <hop> <from>Strings cut</from><to>Value Mapper</to><enabled>Y</enabled> </hop>
-  <hop> <from>Value Mapper</from><to>Text file output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Value Mapper</from><to>Table output</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>CSV file input</name>
@@ -117,7 +117,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <filename>&#x2f;Users&#x2f;Pablo&#x2f;Documents&#x2f;TIN&#x2f;Paro_por_municipios_2013_csv.csv</filename>
+    <filename>C&#x3a;&#x5c;Users&#x5c;Manuel&#x5c;Desktop&#x5c;TIN&#x5c;Pr&#xe1;ctica&#x5c;Proyecto Paro&#x5c;Paro_por_municipios_2013_csv.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -433,6 +433,56 @@
     </step>
 
   <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>paro</connection>
+    <schema/>
+    <table>tiempo</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>id_tiempo</column_name>
+          <stream_name>id_tiempo</stream_name>
+        </field>
+        <field>
+          <column_name>anno</column_name>
+          <stream_name>anno</stream_name>
+        </field>
+        <field>
+          <column_name>mes</column_name>
+          <stream_name>mes</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>727</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>Unique rows</name>
     <type>Unique</type>
     <description/>
@@ -525,58 +575,6 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>558</xloc>
       <yloc>206</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Text file output</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <separator>&#x3b;</separator>
-    <enclosure>&#x22;</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>prueba_job</name>
-      <is_command>N</is_command>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>668</xloc>
-      <yloc>86</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
