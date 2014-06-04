@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>pruebav</name>
+  <name>cargadimensiones</name>
     <description/>
     <extended_description/>
     <job_version/>
+    <job_status>0</job_status>
   <directory>&#x2f;</directory>
   <created_user>-</created_user>
-  <created_date>2014&#x2f;06&#x2f;03 18&#x3a;22&#x3a;06.886</created_date>
+  <created_date>2014&#x2f;05&#x2f;20 21&#x3a;04&#x3a;48.265</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;06&#x2f;03 18&#x3a;22&#x3a;06.886</modified_date>
+  <modified_date>2014&#x2f;05&#x2f;20 21&#x3a;04&#x3a;48.265</modified_date>
     <parameters>
     </parameters>
+  <connection>
+    <name>paro</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>bdparo</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
     <slaveservers>
     </slaveservers>
 <job-log-table><connection/>
@@ -34,12 +62,49 @@
    <shared_objects_file/>
   <entries>
     <entry>
-      <name>Transformation</name>
+      <name>START</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>164</xloc>
+      <yloc>226</yloc>
+      </entry>
+    <entry>
+      <name>Check Db connections</name>
+      <description/>
+      <type>CHECK_DB_CONNECTIONS</type>
+      <connections>
+        <connection>
+          <name>paro</name>
+          <waitfor>0</waitfor>
+          <waittime>millisecond</waittime>
+        </connection>
+      </connections>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>315</xloc>
+      <yloc>223</yloc>
+      </entry>
+    <entry>
+      <name>hecho1</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C&#x3a;&#x5c;Users&#x5c;Manuel&#x5c;Documents&#x5c;GitHub&#x5c;TIN&#x5c;t_demografia1.ktr</filename>
+      <filename>C&#x3a;&#x5c;Users&#x5c;Manuel&#x5c;Desktop&#x5c;TIN&#x5c;Pr&#xe1;ctica&#x5c;Proyecto Paro&#x5c;t_hecho1.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -63,154 +128,116 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>772</xloc>
-      <yloc>208</yloc>
+      <xloc>438</xloc>
+      <yloc>88</yloc>
       </entry>
     <entry>
-      <name>START</name>
+      <name>hecho2</name>
       <description/>
-      <type>SPECIAL</type>
-      <start>Y</start>
-      <dummy>N</dummy>
-      <repeat>N</repeat>
-      <schedulerType>0</schedulerType>
-      <intervalSeconds>0</intervalSeconds>
-      <intervalMinutes>60</intervalMinutes>
-      <hour>12</hour>
-      <minutes>0</minutes>
-      <weekDay>1</weekDay>
-      <DayOfMonth>1</DayOfMonth>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>C&#x3a;&#x5c;Users&#x5c;Manuel&#x5c;Desktop&#x5c;TIN&#x5c;Pr&#xe1;ctica&#x5c;Proyecto Paro&#x5c;t_hecho2.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>555</xloc>
+      <yloc>88</yloc>
+      </entry>
+    <entry>
+      <name>Table exists 2</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <tablename>hecho2</tablename>
+      <schemaname/>
+      <connection>paro</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>110</xloc>
-      <yloc>212</yloc>
+      <xloc>565</xloc>
+      <yloc>227</yloc>
       </entry>
     <entry>
-      <name>demografia1</name>
+      <name>Success</name>
       <description/>
-      <type>SET_VARIABLES</type>
-      <replacevars>Y</replacevars>
-      <filename/>
-      <file_variable_type>JVM</file_variable_type>
-      <fields>
-        <field>
-          <variable_name>id</variable_name>
-          <variable_value>1</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-      </fields>
+      <type>SUCCESS</type>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>413</xloc>
-      <yloc>48</yloc>
+      <xloc>704</xloc>
+      <yloc>224</yloc>
       </entry>
     <entry>
-      <name>demografia2</name>
+      <name>Abort job 2</name>
       <description/>
-      <type>SET_VARIABLES</type>
-      <replacevars>Y</replacevars>
-      <filename/>
-      <file_variable_type>JVM</file_variable_type>
-      <fields>
-        <field>
-          <variable_name>id</variable_name>
-          <variable_value>2</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-      </fields>
+      <type>ABORT</type>
+      <message/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>416</xloc>
-      <yloc>135</yloc>
+      <xloc>439</xloc>
+      <yloc>368</yloc>
       </entry>
     <entry>
-      <name>demografia3</name>
+      <name>Abort job 3</name>
       <description/>
-      <type>SET_VARIABLES</type>
-      <replacevars>Y</replacevars>
-      <filename/>
-      <file_variable_type>JVM</file_variable_type>
-      <fields>
-        <field>
-          <variable_name>id</variable_name>
-          <variable_value>3</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-      </fields>
+      <type>ABORT</type>
+      <message/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>415</xloc>
-      <yloc>206</yloc>
+      <xloc>570</xloc>
+      <yloc>365</yloc>
       </entry>
     <entry>
-      <name>demografia4</name>
+      <name>Table exists</name>
       <description/>
-      <type>SET_VARIABLES</type>
-      <replacevars>Y</replacevars>
-      <filename/>
-      <file_variable_type>JVM</file_variable_type>
-      <fields>
-        <field>
-          <variable_name>id</variable_name>
-          <variable_value>4</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-      </fields>
+      <type>TABLE_EXISTS</type>
+      <tablename>hecho1</tablename>
+      <schemaname/>
+      <connection>paro</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>416</xloc>
-      <yloc>282</yloc>
+      <xloc>436</xloc>
+      <yloc>230</yloc>
       </entry>
     <entry>
-      <name>demografia5</name>
+      <name>Abort job</name>
       <description/>
-      <type>SET_VARIABLES</type>
-      <replacevars>Y</replacevars>
-      <filename/>
-      <file_variable_type>JVM</file_variable_type>
-      <fields>
-        <field>
-          <variable_name>id</variable_name>
-          <variable_value>5</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-      </fields>
+      <type>ABORT</type>
+      <message/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>417</xloc>
-      <yloc>351</yloc>
-      </entry>
-    <entry>
-      <name>demografia6</name>
-      <description/>
-      <type>SET_VARIABLES</type>
-      <replacevars>Y</replacevars>
-      <filename/>
-      <file_variable_type>JVM</file_variable_type>
-      <fields>
-        <field>
-          <variable_name>id</variable_name>
-          <variable_value>6</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-      </fields>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>415</xloc>
-      <yloc>431</yloc>
+      <xloc>314</xloc>
+      <yloc>375</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>demografia1</to>
+      <to>Check Db connections</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -218,8 +245,8 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>demografia1</from>
-      <to>Transformation</to>
+      <from>hecho2</from>
+      <to>Table exists 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -227,17 +254,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>START</from>
-      <to>demografia2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>demografia2</from>
-      <to>Transformation</to>
+      <from>hecho1</from>
+      <to>Table exists</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -245,17 +263,26 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>START</from>
-      <to>demografia3</to>
+      <from>Table exists</from>
+      <to>Abort job 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>demografia3</from>
-      <to>Transformation</to>
+      <from>Table exists 2</from>
+      <to>Abort job 3</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check Db connections</from>
+      <to>Table exists</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -263,17 +290,17 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>START</from>
-      <to>demografia4</to>
+      <from>Check Db connections</from>
+      <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>demografia4</from>
-      <to>Transformation</to>
+      <from>hecho1</from>
+      <to>Table exists 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -281,35 +308,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>START</from>
-      <to>demografia5</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>demografia5</from>
-      <to>Transformation</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>demografia6</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>demografia6</from>
-      <to>Transformation</to>
+      <from>hecho2</from>
+      <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

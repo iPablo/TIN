@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>t_sector</name>
+    <name>dimension_sector</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
     </parameters>
@@ -100,7 +101,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Add sequence</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add sequence</from><to>sector</to><enabled>Y</enabled> </hop>
   <hop> <from>CSV file input</from><to>Add sequence</to><enabled>Y</enabled> </hop>
   </order>
   <step>
@@ -178,7 +179,7 @@
     </step>
 
   <step>
-    <name>Table output</name>
+    <name>sector</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>

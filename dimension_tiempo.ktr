@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>t_tiempo</name>
+    <name>dimension_tiempo</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
     </parameters>
@@ -104,7 +105,7 @@
   <hop> <from>Select values</from><to>Unique rows</to><enabled>Y</enabled> </hop>
   <hop> <from>Unique rows</from><to>Strings cut</to><enabled>Y</enabled> </hop>
   <hop> <from>Strings cut</from><to>Value Mapper</to><enabled>Y</enabled> </hop>
-  <hop> <from>Value Mapper</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Value Mapper</from><to>tiempo</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>CSV file input</name>
@@ -433,7 +434,7 @@
     </step>
 
   <step>
-    <name>Table output</name>
+    <name>tiempo</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
