@@ -100,7 +100,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Add sequence</from><to>Demografia</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add sequence</from><to>Table output</to><enabled>Y</enabled> </hop>
   <hop> <from>CSV file input</from><to>Add sequence</to><enabled>Y</enabled> </hop>
   </order>
   <step>
@@ -171,14 +171,14 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>306</xloc>
-      <yloc>258</yloc>
+      <xloc>337</xloc>
+      <yloc>261</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Demografia</name>
+    <name>Table output</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -217,8 +217,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>734</xloc>
-      <yloc>258</yloc>
+      <xloc>707</xloc>
+      <yloc>259</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
