@@ -136,7 +136,7 @@
     <separator>&#x3b;</separator>
     <enclosure>&#x22;</enclosure>
     <header>Y</header>
-    <buffer_size>10000</buffer_size>
+    <buffer_size>50000</buffer_size>
     <lazy_conversion>Y</lazy_conversion>
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
@@ -843,7 +843,7 @@
     <schema/>
     <table>hecho2</table>
     <commit>1000</commit>
-    <truncate>Y</truncate>
+    <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
