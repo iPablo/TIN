@@ -103,7 +103,7 @@
   <hop> <from>CSV file input</from><to>Select values</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values</from><to>Unique rows</to><enabled>Y</enabled> </hop>
   <hop> <from>Unique rows</from><to>Strings cut</to><enabled>Y</enabled> </hop>
-  <hop> <from>Strings cut</from><to>Value Mapper</to><enabled>Y</enabled> </hop>
+  <hop> <from>Strings cut</from><to>Value Mapper</to><enabled>N</enabled> </hop>
   <hop> <from>Value Mapper</from><to>Table output</to><enabled>Y</enabled> </hop>
   </order>
   <step>
@@ -354,8 +354,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>203</xloc>
-      <yloc>202</yloc>
+      <xloc>197</xloc>
+      <yloc>205</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -393,7 +393,7 @@
         <storage_type/>
       </meta>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>335</xloc>
+      <xloc>337</xloc>
       <yloc>205</yloc>
       <draw>Y</draw>
       </GUI>
@@ -427,7 +427,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>559</xloc>
-      <yloc>75</yloc>
+      <yloc>73</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -476,8 +476,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>727</xloc>
-      <yloc>200</yloc>
+      <xloc>726</xloc>
+      <yloc>206</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
