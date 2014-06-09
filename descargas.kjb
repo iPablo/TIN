@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>descarga</name>
+  <name>descargas</name>
     <description/>
     <extended_description/>
     <job_version/>
+    <job_status>0</job_status>
   <directory>&#x2f;</directory>
   <created_user>-</created_user>
-  <created_date>2014&#x2f;06&#x2f;05 13&#x3a;17&#x3a;30.736</created_date>
+  <created_date>2013&#x2f;06&#x2f;28 22&#x3a;06&#x3a;14.777</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;06&#x2f;05 13&#x3a;17&#x3a;30.736</modified_date>
+  <modified_date>2013&#x2f;06&#x2f;28 22&#x3a;06&#x3a;14.777</modified_date>
     <parameters>
+        <parameter>
+            <name>FILENAME</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>URL</name>
+            <default_value/>
+            <description/>
+        </parameter>
     </parameters>
     <slaveservers>
     </slaveservers>
@@ -34,11 +45,31 @@
    <shared_objects_file/>
   <entries>
     <entry>
+      <name>START</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>100</xloc>
+      <yloc>98</yloc>
+      </entry>
+    <entry>
       <name>HTTP</name>
       <description/>
       <type>HTTP</type>
-      <url>https&#x3a;&#x2f;&#x2f;sede.sepe.gob.es&#x2f;es&#x2f;portaltrabaja&#x2f;resources&#x2f;sede&#x2f;datos_abiertos&#x2f;datos&#x2f;Paro_por_municipios_2013_csv.csv</url>
-      <targetfilename>&#x2f;Users&#x2f;Pablo&#x2f;Documents&#x2f;TIN&#x2f;Paro.csv</targetfilename>
+      <url>&#x24;&#x7b;URL&#x7d;</url>
+      <targetfilename>&#x24;&#x7b;PATH&#x7d;&#x24;&#x7b;FILENAME&#x7d;</targetfilename>
       <file_appended>N</file_appended>
       <date_time_added>N</date_time_added>
       <targetfilename_extention/>
@@ -56,28 +87,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>232</xloc>
-      <yloc>155</yloc>
-      </entry>
-    <entry>
-      <name>START</name>
-      <description/>
-      <type>SPECIAL</type>
-      <start>Y</start>
-      <dummy>N</dummy>
-      <repeat>N</repeat>
-      <schedulerType>0</schedulerType>
-      <intervalSeconds>0</intervalSeconds>
-      <intervalMinutes>60</intervalMinutes>
-      <hour>12</hour>
-      <minutes>0</minutes>
-      <weekDay>1</weekDay>
-      <DayOfMonth>1</DayOfMonth>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>62</xloc>
-      <yloc>161</yloc>
+      <xloc>187</xloc>
+      <yloc>99</yloc>
       </entry>
     <entry>
       <name>Success</name>
@@ -86,8 +97,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>393</xloc>
-      <yloc>156</yloc>
+      <xloc>274</xloc>
+      <yloc>97</yloc>
       </entry>
   </entries>
   <hops>
