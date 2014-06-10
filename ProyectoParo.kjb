@@ -77,8 +77,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>26</xloc>
-      <yloc>242</yloc>
+      <xloc>27</xloc>
+      <yloc>249</yloc>
       </entry>
     <entry>
       <name>dimensiones</name>
@@ -276,8 +276,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>344</xloc>
-      <yloc>247</yloc>
+      <xloc>362</xloc>
+      <yloc>250</yloc>
       </entry>
     <entry>
       <name>Set variables</name>
@@ -306,8 +306,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>113</xloc>
-      <yloc>242</yloc>
+      <xloc>124</xloc>
+      <yloc>248</yloc>
       </entry>
   </entries>
   <hops>
