@@ -65,7 +65,7 @@
       <yloc>140</yloc>
       </entry>
     <entry>
-      <name>FILELIST</name>
+      <name>Ficheros</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
@@ -170,7 +170,7 @@
   </entries>
   <hops>
     <hop>
-      <from>FILELIST</from>
+      <from>Ficheros</from>
       <to>descargas</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -189,7 +189,7 @@
     </hop>
     <hop>
       <from>PATH</from>
-      <to>FILELIST</to>
+      <to>Ficheros</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

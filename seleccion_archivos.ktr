@@ -89,8 +89,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>340</xloc>
-      <yloc>200</yloc>
+      <xloc>507</xloc>
+      <yloc>201</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
