@@ -107,20 +107,23 @@
   <hop> <from>Get Variables 2</from><to>Select values 5</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values 5</from><to>ubicacion</to><enabled>Y</enabled> </hop>
   <hop> <from>ubicacion</from><to>tiempo</to><enabled>Y</enabled> </hop>
-  <hop> <from>demografia1</from><to>hecho2</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>demografia3</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>demografia4</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>demografia5</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>demografia6</to><enabled>Y</enabled> </hop>
-  <hop> <from>demografia2</from><to>hecho2</to><enabled>Y</enabled> </hop>
-  <hop> <from>demografia3</from><to>hecho2</to><enabled>Y</enabled> </hop>
-  <hop> <from>demografia4</from><to>hecho2</to><enabled>Y</enabled> </hop>
-  <hop> <from>demografia5</from><to>hecho2</to><enabled>Y</enabled> </hop>
-  <hop> <from>demografia6</from><to>hecho2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Strings cut</from><to>Value Mapper</to><enabled>Y</enabled> </hop>
-  <hop> <from>Value Mapper</from><to>Concat Fields</to><enabled>Y</enabled> </hop>
-  <hop> <from>tiempo</from><to>Strings cut</to><enabled>Y</enabled> </hop>
-  <hop> <from>Concat Fields</from><to>Switch &#x2f; Case</to><enabled>Y</enabled> </hop>
+  <hop> <from>tiempo</from><to>Switch &#x2f; Case</to><enabled>Y</enabled> </hop>
+  <hop> <from>demografia1</from><to>Get System Info</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get System Info</from><to>hecho2</to><enabled>Y</enabled> </hop>
+  <hop> <from>demografia2</from><to>Get System Info 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get System Info 2</from><to>hecho2</to><enabled>Y</enabled> </hop>
+  <hop> <from>demografia3</from><to>Get System Info 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get System Info 3</from><to>hecho2</to><enabled>Y</enabled> </hop>
+  <hop> <from>demografia4</from><to>Get System Info 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get System Info 4</from><to>hecho2</to><enabled>Y</enabled> </hop>
+  <hop> <from>demografia5</from><to>Get System Info 5</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get System Info 5</from><to>hecho2</to><enabled>Y</enabled> </hop>
+  <hop> <from>demografia6</from><to>Get System Info 6</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get System Info 6</from><to>hecho2</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>CSV file input</name>
@@ -553,14 +556,6 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>hora</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>fecha</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
       <meta>        <name>Paro hombre edad &#x3c; 25</name>
         <rename>paro</rename>
@@ -609,14 +604,6 @@
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>id_tiempo</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>hora</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>fecha</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -671,14 +658,6 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>hora</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>fecha</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
       <meta>        <name>Paro hombre edad &#x3e;&#x3d;45</name>
         <rename>paro</rename>
@@ -727,14 +706,6 @@
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>id_tiempo</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>hora</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>fecha</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -789,14 +760,6 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>hora</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>fecha</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
       <meta>        <name>Paro mujer edad 25 -45</name>
         <rename>paro</rename>
@@ -845,14 +808,6 @@
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>id_tiempo</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>hora</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>fecha</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -925,6 +880,10 @@
           <column_name>tiempo_fk</column_name>
           <stream_name>id_tiempo</stream_name>
         </field>
+        <field>
+          <column_name>fecha_insercion</column_name>
+          <stream_name>Fecha</stream_name>
+        </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -970,8 +929,8 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>360</xloc>
-      <yloc>189</yloc>
+      <xloc>252</xloc>
+      <yloc>270</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1031,8 +990,8 @@
     </step>
 
   <step>
-    <name>Concat Fields</name>
-    <type>ConcatFields</type>
+    <name>Get System Info</name>
+    <type>SystemInfo</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1041,91 +1000,23 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>-</separator>
-    <enclosure/>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>N</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>file</name>
-      <is_command>N</is_command>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
     <fields>
       <field>
-        <name>dia</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>mes</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>anno</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <ConcatFields>
-<targetFieldName>fecha</targetFieldName>
-<targetFieldLength>0</targetFieldLength>
-<removeSelectedFields>N</removeSelectedFields>
-    </ConcatFields>
+        <name>Fecha</name>
+        <type>system date &#x28;fixed&#x29;</type>
+        </field>
+      </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>142</xloc>
-      <yloc>270</yloc>
+      <xloc>510</xloc>
+      <yloc>330</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Strings cut</name>
-    <type>StringCut</type>
+    <name>Get System Info 2</name>
+    <type>SystemInfo</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1136,41 +1027,21 @@
            </partitioning>
     <fields>
       <field>
-        <in_stream_name>rc_timestamp</in_stream_name>
-        <out_stream_name>dia</out_stream_name>
-        <cut_from>6</cut_from>
-        <cut_to>8</cut_to>
-      </field>
-      <field>
-        <in_stream_name>rc_timestamp</in_stream_name>
-        <out_stream_name>mes</out_stream_name>
-        <cut_from>4</cut_from>
-        <cut_to>6</cut_to>
-      </field>
-      <field>
-        <in_stream_name>rc_timestamp</in_stream_name>
-        <out_stream_name>anno</out_stream_name>
-        <cut_from>0</cut_from>
-        <cut_to>4</cut_to>
-      </field>
-      <field>
-        <in_stream_name>rc_timestamp</in_stream_name>
-        <out_stream_name>hora</out_stream_name>
-        <cut_from>8</cut_from>
-        <cut_to>14</cut_to>
-      </field>
-    </fields>
+        <name>Fecha</name>
+        <type>system date &#x28;fixed&#x29;</type>
+        </field>
+      </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>340</xloc>
-      <yloc>267</yloc>
+      <xloc>467</xloc>
+      <yloc>356</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Value Mapper</name>
-    <type>ValueMapper</type>
+    <name>Get System Info 3</name>
+    <type>SystemInfo</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1179,63 +1050,91 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <field_to_use>mes</field_to_use>
-    <target_field>nombre_mes</target_field>
-    <non_match_default/>
     <fields>
       <field>
-        <source_value>01</source_value>
-        <target_value>Enero</target_value>
-      </field>
-      <field>
-        <source_value>02</source_value>
-        <target_value>Febrero</target_value>
-      </field>
-      <field>
-        <source_value>03</source_value>
-        <target_value>Marzo</target_value>
-      </field>
-      <field>
-        <source_value>04</source_value>
-        <target_value>Abril</target_value>
-      </field>
-      <field>
-        <source_value>05</source_value>
-        <target_value>Mayo</target_value>
-      </field>
-      <field>
-        <source_value>06</source_value>
-        <target_value>Junio</target_value>
-      </field>
-      <field>
-        <source_value>07</source_value>
-        <target_value>Julio</target_value>
-      </field>
-      <field>
-        <source_value>08</source_value>
-        <target_value>Agosto</target_value>
-      </field>
-      <field>
-        <source_value>09</source_value>
-        <target_value>Septiembre</target_value>
-      </field>
-      <field>
-        <source_value>10</source_value>
-        <target_value>Octubre</target_value>
-      </field>
-      <field>
-        <source_value>11</source_value>
-        <target_value>Noviembre</target_value>
-      </field>
-      <field>
-        <source_value>12</source_value>
-        <target_value>Diciembre</target_value>
-      </field>
-    </fields>
+        <name>Fecha</name>
+        <type>system date &#x28;fixed&#x29;</type>
+        </field>
+      </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>243</xloc>
-      <yloc>267</yloc>
+      <xloc>463</xloc>
+      <yloc>396</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get System Info 4</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>Fecha</name>
+        <type>system date &#x28;fixed&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>484</xloc>
+      <yloc>435</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get System Info 5</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>Fecha</name>
+        <type>system date &#x28;fixed&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>510</xloc>
+      <yloc>462</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get System Info 6</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>Fecha</name>
+        <type>system date &#x28;fixed&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>531</xloc>
+      <yloc>497</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
