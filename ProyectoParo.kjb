@@ -19,7 +19,7 @@
     <database>bdparo</database>
     <port>3306</port>
     <username>&#x24;&#x7b;usuario&#x7d;</username>
-    <password>Encrypted </password>
+    <password>&#x24;&#x7b;password&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -295,6 +295,11 @@
         <field>
           <variable_name>password</variable_name>
           <variable_value>root</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>fichero</variable_name>
+          <variable_value>2012</variable_value>
           <variable_type>JVM</variable_type>
         </field>
       </fields>

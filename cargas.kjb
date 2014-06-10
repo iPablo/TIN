@@ -145,21 +145,21 @@
       <fields>
         <field>
           <variable_name>PATH</variable_name>
-          <variable_value>&#x2f;Users&#x2f;Pablo&#x2f;Documents&#x2f;TIN&#x2f;CSV&#x2f;</variable_value>
+          <variable_value>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;CSV&#x2f;</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>276</xloc>
+      <xloc>273</xloc>
       <yloc>148</yloc>
       </entry>
     <entry>
       <name>Create a folder</name>
       <description/>
       <type>CREATE_FOLDER</type>
-      <foldername>&#x2f;Users&#x2f;Pablo&#x2f;Documents&#x2f;TIN&#x2f;CSV</foldername>
+      <foldername>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;CSV</foldername>
       <fail_of_folder_exists>N</fail_of_folder_exists>
       <parallel>N</parallel>
       <draw>Y</draw>
