@@ -19,8 +19,8 @@
     <access>Native</access>
     <database>bdparo</database>
     <port>3306</port>
-    <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <username>&#x24;&#x7b;usuario&#x7d;</username>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -151,7 +151,7 @@
       <name>t_tiempo</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>tiempo</tablename>
+      <tablename>Tiempo</tablename>
       <schemaname/>
       <connection>paro</connection>
       <parallel>N</parallel>

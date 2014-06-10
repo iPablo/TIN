@@ -9,7 +9,7 @@ create table Tiempo(
 
 create table Ubicacion(
 	id_ubicacion int(3) primary key,
-	ciudad varchar(45) not null,
+	ciudad varchar(48) not null,
 	provincia varchar(45) not null,
 	ca varchar(45) not null
 );

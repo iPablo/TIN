@@ -80,8 +80,8 @@
     <access>Native</access>
     <database>bdparo</database>
     <port>3306</port>
-    <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <username>&#x24;&#x7b;usuario&#x7d;</username>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -144,7 +144,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <filename>C&#x3a;&#x5c;Users&#x5c;Manuel&#x5c;Desktop&#x5c;TIN&#x5c;Pr&#xe1;ctica&#x5c;Proyecto Paro&#x5c;sectores.csv</filename>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;CSV&#x2f;paro_&#x24;&#x7b;fichero&#x7d;.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>

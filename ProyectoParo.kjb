@@ -276,8 +276,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>362</xloc>
-      <yloc>250</yloc>
+      <xloc>355</xloc>
+      <yloc>192</yloc>
       </entry>
     <entry>
       <name>Set variables</name>
@@ -299,7 +299,7 @@
         </field>
         <field>
           <variable_name>fichero</variable_name>
-          <variable_value>2012</variable_value>
+          <variable_value>2013</variable_value>
           <variable_type>JVM</variable_type>
         </field>
       </fields>
@@ -375,24 +375,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check Db connections</from>
-      <to>Ficheros</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Ficheros</from>
-      <to>dimensiones</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>START</from>
       <to>Set variables</to>
       <from_nr>0</from_nr>
@@ -404,6 +386,15 @@
     <hop>
       <from>Set variables</from>
       <to>Check Db connections</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check Db connections</from>
+      <to>dimensiones</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
