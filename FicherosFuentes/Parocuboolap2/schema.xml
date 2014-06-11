@@ -1,0 +1,37 @@
+<Schema name="ParoCuboOlap2">
+  <Dimension name="Demografia">
+    <Hierarchy hasAll="true" primaryKey="id_demografia">
+      <Table name="demografia" schema="bdparo"/>
+      <Level name="Sexo edad" uniqueMembers="false" column="sexo_edad" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="Tiempo">
+    <Hierarchy hasAll="true" primaryKey="id_tiempo">
+      <Table name="tiempo" schema="bdparo"/>
+      <Level name="Anno" uniqueMembers="false" column="anno" type="String">
+      </Level>
+      <Level name="Mes" uniqueMembers="false" column="mes" ordinalColumn="id_tiempo" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="Ubicacion">
+    <Hierarchy hasAll="true" primaryKey="id_ubicacion">
+      <Table name="ubicacion" schema="bdparo"/>
+      <Level name="Ca" uniqueMembers="false" column="ca" type="String">
+      </Level>
+      <Level name="Provincia" uniqueMembers="false" column="provincia" type="String">
+      </Level>
+      <Level name="Ciudad" uniqueMembers="false" column="ciudad" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="ParoCuboOlap2">
+    <Table name="hecho2" schema="bdparo"/>
+    <DimensionUsage name="Demografia" source="Demografia" foreignKey="demografia_fk"/>
+    <DimensionUsage name="Tiempo" source="Tiempo" foreignKey="tiempo_fk"/>
+    <DimensionUsage name="Ubicacion" source="Ubicacion" foreignKey="ubicacion_fk"/>
+    <Measure name="ParoMedia" column="paro" aggregator="avg" formatString="&#x23;"/>
+    <Measure name="ParoSuma" column="paro" aggregator="sum" formatString="&#x23;"/>
+  </Cube>
+</Schema>
