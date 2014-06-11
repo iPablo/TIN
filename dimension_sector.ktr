@@ -175,7 +175,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>263</xloc>
-      <yloc>237</yloc>
+      <yloc>236</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

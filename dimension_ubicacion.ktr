@@ -106,7 +106,7 @@
   <order>
   <hop> <from>Select values</from><to>Add sequence</to><enabled>Y</enabled> </hop>
   <hop> <from>Add sequence</from><to>ubicacion</to><enabled>Y</enabled> </hop>
-  <hop> <from>CSV file input</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>CSV file input 2</from><to>Select values</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Add sequence</name>
@@ -269,7 +269,7 @@
     </step>
 
   <step>
-    <name>CSV file input</name>
+    <name>CSV file input 2</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -516,8 +516,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>217</xloc>
-      <yloc>208</yloc>
+      <xloc>221</xloc>
+      <yloc>201</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

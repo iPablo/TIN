@@ -113,7 +113,7 @@
       <yloc>252</yloc>
       </entry>
     <entry>
-      <name>hechos1</name>
+      <name>hechos2</name>
       <description/>
       <type>JOB</type>
       <specification_method>filename</specification_method>
@@ -141,11 +141,11 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>603</xloc>
-      <yloc>256</yloc>
+      <xloc>722</xloc>
+      <yloc>253</yloc>
       </entry>
     <entry>
-      <name>hechos2</name>
+      <name>hechos</name>
       <description/>
       <type>JOB</type>
       <specification_method>filename</specification_method>
@@ -173,7 +173,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>732</xloc>
+      <xloc>599</xloc>
       <yloc>252</yloc>
       </entry>
     <entry>
@@ -205,8 +205,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>603</xloc>
-      <yloc>377</yloc>
+      <xloc>722</xloc>
+      <yloc>374</yloc>
       </entry>
     <entry>
       <name>Abort job 3</name>
@@ -216,7 +216,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>734</xloc>
+      <xloc>602</xloc>
       <yloc>379</yloc>
       </entry>
     <entry>
@@ -257,25 +257,25 @@
       <fields>
         <field>
           <variable_name>usuario</variable_name>
-          <variable_value>mgomez</variable_value>
+          <variable_value>prueba</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
           <variable_name>password</variable_name>
-          <variable_value>mgomez</variable_value>
+          <variable_value>test</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
           <variable_name>fichero</variable_name>
-          <variable_value>2012</variable_value>
+          <variable_value>2013</variable_value>
           <variable_type>JVM</variable_type>
         </field>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>124</xloc>
-      <yloc>249</yloc>
+      <xloc>122</xloc>
+      <yloc>248</yloc>
       </entry>
   </entries>
   <hops>
@@ -289,7 +289,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>hechos1</from>
+      <from>hechos2</from>
       <to>Abort job 2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -298,39 +298,12 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>hechos2</from>
+      <from>hechos</from>
       <to>Abort job 3</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>dimensiones</from>
-      <to>hechos1</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>hechos1</from>
-      <to>hechos2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>hechos2</from>
-      <to>Success</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
@@ -363,6 +336,33 @@
     <hop>
       <from>Check Db connections</from>
       <to>dimensiones</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>dimensiones</from>
+      <to>hechos</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>hechos</from>
+      <to>hechos2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>hechos2</from>
+      <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

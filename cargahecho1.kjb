@@ -218,7 +218,7 @@
       <name>Table exists</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>hecho4</tablename>
+      <tablename>hecho1</tablename>
       <schemaname/>
       <connection>paro</connection>
       <parallel>N</parallel>

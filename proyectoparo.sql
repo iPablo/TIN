@@ -1,5 +1,13 @@
 create database bdparo;
 use bdparo;
+set foreign_key_checks=0;
+
+drop table if exists hecho1;
+drop table if exists hecho2;
+drop table if exists Tiempo;
+drop table if exists Ubicacion;
+drop table if exists Sector;
+drop table if exists Demografia;
 
 create table Tiempo(
 	id_tiempo varchar(45) primary key,
