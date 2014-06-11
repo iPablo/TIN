@@ -144,7 +144,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;CSV&#x2f;paro_&#x24;&#x7b;fichero&#x7d;.csv</filename>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;demografia.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
