@@ -100,19 +100,6 @@
       <xloc>576</xloc>
       <yloc>57</yloc>
       </entry>
-    <entry>
-      <name>Checks if files exist</name>
-      <description/>
-      <type>FILES_EXIST</type>
-      <filename/>
-      <fields>
-      </fields>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>238</xloc>
-      <yloc>114</yloc>
-      </entry>
   </entries>
   <hops>
     <hop>

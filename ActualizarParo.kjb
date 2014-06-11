@@ -118,17 +118,17 @@
       <fields>
         <field>
           <variable_name>usuario</variable_name>
-          <variable_value>root</variable_value>
+          <variable_value>mgomez</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
           <variable_name>password</variable_name>
-          <variable_value>root</variable_value>
+          <variable_value>mgomez</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
           <variable_name>fichero</variable_name>
-          <variable_value>2012</variable_value>
+          <variable_value>2013</variable_value>
           <variable_type>JVM</variable_type>
         </field>
       </fields>
@@ -144,7 +144,7 @@
       <type>JOB</type>
       <specification_method>filename</specification_method>
       <job_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;cargahecho1.kjb</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;cargahecho2.kjb</filename>
       <jobname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -234,6 +234,63 @@
       <xloc>637</xloc>
       <yloc>439</yloc>
       </entry>
+    <entry>
+      <name>d_tiempo</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;dimension_tiempo.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>389</xloc>
+      <yloc>192</yloc>
+      </entry>
+    <entry>
+      <name>t_tiempo</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <tablename>Tiempo</tablename>
+      <schemaname/>
+      <connection>paro</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>394</xloc>
+      <yloc>322</yloc>
+      </entry>
+    <entry>
+      <name>Abort job 3 2</name>
+      <description/>
+      <type>ABORT</type>
+      <message/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>390</xloc>
+      <yloc>440</yloc>
+      </entry>
   </entries>
   <hops>
     <hop>
@@ -301,6 +358,33 @@
     </hop>
     <hop>
       <from>Check Db connections</from>
+      <to>t_tiempo</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>t_tiempo</from>
+      <to>d_tiempo</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>t_tiempo</from>
+      <to>Abort job 3 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>d_tiempo</from>
       <to>hechos1</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

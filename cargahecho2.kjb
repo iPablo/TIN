@@ -20,7 +20,7 @@
     <database>bdparo</database>
     <port>3306</port>
     <username>&#x24;&#x7b;usuario&#x7d;</username>
-    <password>Encrypted </password>
+    <password>&#x24;&#x7b;password&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -218,7 +218,7 @@
       <name>Table exists</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>hecho2</tablename>
+      <tablename>hecho3</tablename>
       <schemaname/>
       <connection>paro</connection>
       <parallel>N</parallel>

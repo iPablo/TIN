@@ -81,7 +81,7 @@
     <database>bdparo</database>
     <port>3306</port>
     <username>&#x24;&#x7b;usuario&#x7d;</username>
-    <password>Encrypted </password>
+    <password>&#x24;&#x7b;password&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -105,7 +105,7 @@
   <hop> <from>Unique rows</from><to>Strings cut</to><enabled>Y</enabled> </hop>
   <hop> <from>Strings cut</from><to>Value Mapper</to><enabled>Y</enabled> </hop>
   <hop> <from>Value Mapper</from><to>tiempo</to><enabled>Y</enabled> </hop>
-  <hop> <from>Text file input</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>CSV file input</from><to>Select values</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Select values</name>
@@ -327,8 +327,8 @@
     </step>
 
   <step>
-    <name>Text file input</name>
-    <type>TextFileInput</type>
+    <name>CSV file input</name>
+    <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -337,63 +337,30 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <accept_filenames>N</accept_filenames>
-    <passing_through_fields>N</passing_through_fields>
-    <accept_field/>
-    <accept_stepname/>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;CSV&#x2f;paro_&#x24;&#x7b;fichero&#x7d;.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
     <separator>&#x3b;</separator>
     <enclosure>&#x22;</enclosure>
-    <enclosure_breaks>N</enclosure_breaks>
-    <escapechar/>
     <header>Y</header>
-    <nr_headerlines>2</nr_headerlines>
-    <footer>N</footer>
-    <nr_footerlines>1</nr_footerlines>
-    <line_wrapped>N</line_wrapped>
-    <nr_wraps>1</nr_wraps>
-    <layout_paged>N</layout_paged>
-    <nr_lines_per_page>80</nr_lines_per_page>
-    <nr_lines_doc_header>0</nr_lines_doc_header>
-    <noempty>Y</noempty>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <rownumByFile>N</rownumByFile>
-    <rownum_field/>
-    <format>Unix</format>
-    <encoding>UTF-8</encoding>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <file>
-      <name>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;CSV&#x2f;paro_&#x24;&#x7b;fichero&#x7d;.csv</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <type>CSV</type>
-      <compression>None</compression>
-    </file>
-    <filters>
-    </filters>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
     <fields>
       <field>
-        <name>C&#xf3;digo Mes</name>
+        <name>C&#xf3;digo mes</name>
         <type>Integer</type>
         <format>&#x23;</format>
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
         <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>mes</name>
@@ -402,13 +369,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
         <length>18</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>C&#xf3;digo de CA</name>
@@ -417,13 +380,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
         <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Comunidad Aut&#xf3;noma</name>
@@ -432,13 +391,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
         <length>27</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Codigo Provincia</name>
@@ -447,13 +402,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>16</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Provincia</name>
@@ -462,13 +413,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
         <length>22</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Codigo Municipio</name>
@@ -477,13 +424,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>16</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Municipio</name>
@@ -492,28 +435,20 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
         <length>47</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
-        <name>total Paro Registrado </name>
+        <name>total Paro Registrado</name>
         <type>Integer</type>
         <format>&#x23;</format>
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>21</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro hombre edad &#x3c; 25</name>
@@ -522,13 +457,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>21</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro hombre edad 25 -45</name>
@@ -537,13 +468,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>24</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro hombre edad &#x3e;&#x3d;45</name>
@@ -552,28 +479,20 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>21</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
-        <name>Paro mujer &#x3c; 25</name>
+        <name>Paro mujer edad &#x3c; 25</name>
         <type>Integer</type>
         <format>&#x23;</format>
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>20</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro mujer edad 25 -45</name>
@@ -582,13 +501,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>23</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro mujer edad &#x3e;&#x3d;45</name>
@@ -597,13 +512,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>20</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro Agricultura</name>
@@ -612,13 +523,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>16</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro Industria</name>
@@ -627,13 +534,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>14</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro Construcci&#xf3;n</name>
@@ -642,13 +545,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>17</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro Servicios</name>
@@ -657,13 +556,9 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>14</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
       <field>
         <name>Paro Sin empleo Anterior</name>
@@ -672,44 +567,15 @@
         <currency>&#x20ac;</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>24</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
       </field>
     </fields>
-    <limit>0</limit>
-    <error_ignored>N</error_ignored>
-    <skip_bad_files>N</skip_bad_files>
-    <file_error_field/>
-    <file_error_message_field/>
-    <error_line_skipped>N</error_line_skipped>
-    <error_count_field/>
-    <error_fields_field/>
-    <error_text_field/>
-    <bad_line_files_destination_directory/>
-    <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory/>
-    <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory/>
-    <line_number_files_extension>line</line_number_files_extension>
-    <date_format_lenient>Y</date_format_lenient>
-    <date_format_locale>es_ES</date_format_locale>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>203</xloc>
-      <yloc>204</yloc>
+      <xloc>208</xloc>
+      <yloc>194</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
