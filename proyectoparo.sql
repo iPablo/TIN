@@ -1,6 +1,5 @@
 create database bdparo;
 use bdparo;
-set foreign_key_checks=0;
 
 drop table if exists hecho1;
 drop table if exists hecho2;
